@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #4f46e5, #4075f5);
+        }
+
+        .container {
+            width: 424px;
+            background: white;
+            padding: 42px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: #263746;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+
+        .input-group {
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            color: #334155;
+            margin-bottom: 10px;
+        }
+
+        .input-box {
+            height: 54px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #cbd5e1;
+            border-radius: 13px;
+            padding: 0 16px;
+        }
+
+        .input-box i {
+            color: #4085f5;
+            font-size: 20px;
+            margin-right: 14px;
+        }
+
+        .input-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 18px;
+        }
+
+        .input-box:focus-within {
+            border-color: #4085f5;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: -2px 0 35px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        .remember input {
+            width: 15px;
+            height: 15px;
+            accent-color: #4085f5;
+        }
+
+        a {
+            color: #5086e8;
+            text-decoration: none;
+        }
+
+        .forgot {
+            font-size: 16px;
+        }
+
+        .login-btn {
+            width: 100%;
+            height: 54px;
+            background: #4080f5;
+            color: white;
+            border: none;
+            border-radius: 13px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #2868df;
+        }
+
+        .divider {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 18px;
+            margin: 28px 0 26px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
+            flex: 1;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 13px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .google {
+            color: #4285f4;
+        }
+
+        .facebook {
+            color: #1877f2;
+        }
+
+        .signup {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 16px;
+        }
+
+        .signup a {
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 30px 24px;
+                margin: 15px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            label {
+                font-size: 17px;
+            }
+
+            .forgot {
+                font-size: 13px;
+            }
+
+            .social-btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Sign in to continue</p>
+
+        <form action="#" method="post">
+
+            <div class="input-group">
+                <label for="username">Username</label>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="username"
+                           placeholder="Enter Username"  required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password"
+                           placeholder="Enter password" required>
+                </div>
+            </div>
+
+            <div class="options">
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember" style="margin: 0;">
+                        Remember me
+                    </label>
+                </div>
+
+                <a href="#" class="forgot">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Log In
+            </button>
+
+        </form>
+
+        <div class="divider">Or continue with</div>
+
+        <div class="social-buttons">
+
+            <button type="button" class="social-btn">
+                <i class="fa-brands fa-google google"></i>
+                Google
+            </button>
+
+            <button type="button" class="social-btn">
+                <i class="fa-brands fa-facebook facebook"></i>
+                Facebook
+            </button>
+
+        </div>
+
+        <p class="signup">
+            Don't have an account?
+            <a href="#">Sign Up</a>
+        </p>
+
+    </div>
+
+</body>
+</html>
